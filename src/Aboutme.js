@@ -16,7 +16,7 @@ function Aboutme() {
         <div className="about-text">
           <h1>About Me</h1>
           <p className="p-section">
-            Hi I am SEENISELVAM B.I am currently pursuing B.Tech in Artificial Intelligence and Data Science at
+            Hi I am SEENISELVAM B.I am coming from Virudhunagar.I am currently pursuing B.Tech in Artificial Intelligence and Data Science at
             Sri Krishna College of Technology.
             I completed my schooling at Government Higher Secondary School, Mallanginar, Virudhunagar in 2023.
         </p>

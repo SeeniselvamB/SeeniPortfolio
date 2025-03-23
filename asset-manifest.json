@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/SeeniPortfolio/static/css/main.03497a3e.css",
+    "main.js": "/SeeniPortfolio/static/js/main.f2968e77.js",
+    "static/js/453.3d4b9518.chunk.js": "/SeeniPortfolio/static/js/453.3d4b9518.chunk.js",
+    "static/media/seeni.jpg": "/SeeniPortfolio/static/media/seeni.b238e5facb177d37ac8d.jpg",
+    "static/media/bimg2": "/SeeniPortfolio/static/media/bimg2.32f1dd12930a0cbf0917",
+    "index.html": "/SeeniPortfolio/index.html",
+    "main.03497a3e.css.map": "/SeeniPortfolio/static/css/main.03497a3e.css.map",
+    "main.f2968e77.js.map": "/SeeniPortfolio/static/js/main.f2968e77.js.map",
+    "453.3d4b9518.chunk.js.map": "/SeeniPortfolio/static/js/453.3d4b9518.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03497a3e.css",
+    "static/js/main.f2968e77.js"
+  ]
+}

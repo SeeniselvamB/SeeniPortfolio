@@ -35,4 +35,18 @@
   .contact-form button:hover {
     background-color: #0056b3;
   }
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 30px 15px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+    }
+  
+    .contact-form button {
+      width: 100%;
+    }
+  }
   

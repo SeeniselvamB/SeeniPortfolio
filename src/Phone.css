@@ -1,29 +1,56 @@
 .contact-section {
-  padding: 40px;
-  background-color: #f9f9f9;
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Kept as is */
   text-align: center;
+  font-family: 'Times New Roman', serif;
+  color: #333; /* Default text color */
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+
+.contact-section h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #555;
 }
 
 .social-media ul {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .social-media li {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .social-media a {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center; /* Ensures centering of icon and text */
+  gap: 12px;
   font-size: 20px;
-  color: #333;
+  color: #4a4a4a;
   text-decoration: none;
-  transition: color 0.3s ease;
+  padding: 15px 20px;  /* Equal padding for all links */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 100%;  /* Ensures equal width for all */
+  max-width: 400px;  /* Sets maximum width */
+  height: 60px;  /* Ensures all links have the same height */
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
 }
 
 .social-media a:hover {
-  color: #0073e6;
+  color: #fff;
+  background-color: #0073e6;
+  border-color: #0073e6;
+  box-shadow: 2px 2px 12px rgba(0, 115, 230, 0.2);
+  transform: scale(1.03);
 }

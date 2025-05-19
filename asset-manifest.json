@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SeeniPortfolio/static/css/main.03497a3e.css",
-    "main.js": "/SeeniPortfolio/static/js/main.f2968e77.js",
-    "static/js/453.3d4b9518.chunk.js": "/SeeniPortfolio/static/js/453.3d4b9518.chunk.js",
-    "static/media/seeni.jpg": "/SeeniPortfolio/static/media/seeni.b238e5facb177d37ac8d.jpg",
-    "static/media/bimg2": "/SeeniPortfolio/static/media/bimg2.32f1dd12930a0cbf0917",
-    "index.html": "/SeeniPortfolio/index.html",
-    "main.03497a3e.css.map": "/SeeniPortfolio/static/css/main.03497a3e.css.map",
-    "main.f2968e77.js.map": "/SeeniPortfolio/static/js/main.f2968e77.js.map",
-    "453.3d4b9518.chunk.js.map": "/SeeniPortfolio/static/js/453.3d4b9518.chunk.js.map"
+    "main.css": "/Seeniselvam_Portfolio/static/css/main.dd0c6679.css",
+    "main.js": "/Seeniselvam_Portfolio/static/js/main.4afe4bf0.js",
+    "static/js/453.3d4b9518.chunk.js": "/Seeniselvam_Portfolio/static/js/453.3d4b9518.chunk.js",
+    "static/media/seeni.jpg": "/Seeniselvam_Portfolio/static/media/seeni.b238e5facb177d37ac8d.jpg",
+    "static/media/bimg2": "/Seeniselvam_Portfolio/static/media/bimg2.32f1dd12930a0cbf0917",
+    "index.html": "/Seeniselvam_Portfolio/index.html",
+    "main.dd0c6679.css.map": "/Seeniselvam_Portfolio/static/css/main.dd0c6679.css.map",
+    "main.4afe4bf0.js.map": "/Seeniselvam_Portfolio/static/js/main.4afe4bf0.js.map",
+    "453.3d4b9518.chunk.js.map": "/Seeniselvam_Portfolio/static/js/453.3d4b9518.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03497a3e.css",
-    "static/js/main.f2968e77.js"
+    "static/css/main.dd0c6679.css",
+    "static/js/main.4afe4bf0.js"
   ]
 }

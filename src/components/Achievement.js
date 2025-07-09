@@ -5,9 +5,9 @@ const projects = [
   {
     id: 1,
     title: "Project One",
-    description: "Description of project one.",
-    image: "https://via.placeholder.com/150", // Replace with your image URL
-    link: "https://github.com/yourusername/project-one" // Project link (e.g., GitHub)
+    description: "Church Website.",
+    image: "./assests/Church.png", // Replace with your image URL
+    link: "https://csiimmanuelchurchcmu.vercel.app" // Project link (e.g., GitHub)
   },
   {
     id: 2,

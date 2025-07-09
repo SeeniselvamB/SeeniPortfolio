@@ -1,50 +1,84 @@
+
+
 .contact-section {
+  background-color: #f4f4f4;
   padding: 60px 20px;
-  background-color: #f9f9f9; /* Kept as is */
-  text-align: center;
-  font-family: 'Times New Roman', serif;
-  color: #333; /* Default text color */
+  align-items: center;
 }
 
-.contact-section h2 {
+.contact-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-text {
+  flex: 2;
+  padding-right: 40px;
+  text-align: left;
+  align-items: center;
+}
+
+.contact-text h2 {
   font-size: 36px;
-  color: #3a3a3a;
+  color: #222;
   margin-bottom: 20px;
+  text-align: center;
+
 }
 
-.contact-section h3 {
+.contact-text h3 {
   font-size: 24px;
-  margin-bottom: 30px;
   color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.social-media {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
 }
 
 .social-media ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 500px;
+  margin: 0;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
 }
 
 .social-media li {
-  margin: 20px 0;
+  margin: 10px 0;
+  align-items: center;
 }
 
 .social-media a {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Ensures centering of icon and text */
+  justify-content: center;
   gap: 12px;
-  font-size: 20px;
+  font-size: 18px;
   color: #4a4a4a;
   text-decoration: none;
-  padding: 15px 20px;  /* Equal padding for all links */
+  padding: 14px 18px;
   border: 2px solid #ddd;
   border-radius: 12px;
-  width: 100%;  /* Ensures equal width for all */
-  max-width: 400px;  /* Sets maximum width */
-  height: 60px;  /* Ensures all links have the same height */
+  width: 80%;
+  height: 56px;
   transition: all 0.3s ease;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  align-items: center;
 }
 
 .social-media a:hover {
@@ -53,4 +87,32 @@
   border-color: #0073e6;
   box-shadow: 2px 2px 12px rgba(0, 115, 230, 0.2);
   transform: scale(1.03);
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .contact-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .contact-text h2 {
+    font-size: 28px;
+  }
+
+  .contact-text h3 {
+    font-size: 20px;
+  }
+
+  .social-media a {
+    font-size: 16px;
+    height: 50px;
+    align-items: center;
+  }
 }

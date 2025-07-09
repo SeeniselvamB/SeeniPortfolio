@@ -1,63 +1,59 @@
-.home-section {
+ .home-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   min-height: 90vh;
-  padding: 20px;
-  background-image: url('/src/assests/bimg.jpg'); /* ✅ Ensure correct image path and extension */
+  background-image: url('../assests/bimg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0;
 }
 
+
 .home-content {
-  max-width: 800px;
-  width: 90%;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white;
 }
 
 .home-content h1 {
   font-size: 3rem;
-  color: #222;
-  margin-bottom: 20px;
-}
-
-.home-content p {
-  font-size: 1.2rem;
-  color: #444;
   margin-bottom: 20px;
 }
 
 .cta-button {
-  background-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00f2ff;
   color: white;
-  padding: 12px 30px;
   border: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #00c2d3;
+  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .home-content h1 {
     font-size: 2rem;
   }
 
-  .home-content p {
-    font-size: 1rem;
-  }
-
   .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    font-size: 14px;
   }
 }
+section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+}
+

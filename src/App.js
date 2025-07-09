@@ -1,23 +1,59 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import Navbar from "./Navbar";
-import Homepage from "./Homepage";
-import Aboutme from "./Aboutme";
-import Education from "./Education";
-import Projects from "./Achievement";
-import Contacts from "./Phone";
 
+import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
+import Aboutme from "./components/Aboutme";
+import Education from "./components/Education";
+import Projects from "./components/Achievement";
+import Contacts from "./components/Phone";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Homepage/>
-      <Aboutme />
-      <Education />
-      <Projects />
-      <Contacts/>
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <section id="home">
+                    <Homepage />
+                  </section>
+
+                  <section id="about">
+                    <Aboutme />
+                  </section>
+
+                  <section id="education">
+                    <Education />
+                  </section>
+
+                  <section id="projects">
+                    <Projects />
+                  </section>
+
+                  <section id="contact">
+                    <Contacts />
+                  </section>
+                </>
+              }
+            />
+
+          
+            <Route path="/about" element={<Aboutme />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contacts />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

@@ -31,12 +31,18 @@
 .nav-links li {
   list-style: none;
 }
-
+/* 
 .nav-links a {
   color:white;
   text-decoration: none;
   cursor:pointer;
+} */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 
 
 @media screen and (max-width: 768px) {

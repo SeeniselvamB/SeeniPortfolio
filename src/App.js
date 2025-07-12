@@ -8,7 +8,7 @@ import Aboutme from "./components/Aboutme";
 import Education from "./components/Education";
 import Projects from "./components/Achievement";
 import Contacts from "./components/Phone";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (

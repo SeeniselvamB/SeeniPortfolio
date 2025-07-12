@@ -1,3 +1,4 @@
+/* Base App layout */
 .App {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
@@ -8,16 +9,19 @@
   padding: 0;
 }
 
+/* Main content layout */
 .content {
   padding-top: 70px;
 }
 
+/* Global section layout */
 section {
   padding: 60px 0;
   width: 100%;
   box-sizing: border-box;
 }
 
+/* Typography */
 h1, h2 {
   color: #333;
   margin-bottom: 20px;
@@ -41,10 +45,18 @@ img {
   border-radius: 8px;
 }
 
+/* Section spacing fix */
 section + section {
-  margin-top: 0%;
+  margin-top: 40px;
 }
 
+@media (max-width: 768px) {
+  section + section {
+    margin-top: 20px;
+  }
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   section {
     padding: 40px 0;
@@ -67,23 +79,28 @@ section + section {
   }
 }
 
+/* Universal smooth transitions */
 * {
   transition: all 0.3s ease;
 }
 
+/* Scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
+/* Link effects */
 a:hover {
   color: #007bff;
   text-decoration: underline;
 }
 
+/* Alternating section background */
 section:nth-of-type(even) {
-  background-color: #fafafa;
+  background: linear-gradient(to right, #f0f0f0, #fafafa);
 }
 
+/* Focus effects */
 a:focus,
 button:focus {
   outline: 2px solid #007bff;
@@ -91,18 +108,16 @@ button:focus {
   border-radius: 4px;
 }
 
+/* Button spacing */
 button {
   margin: 10px 0;
 }
 
-.mt-20 {
-  margin-top: 20px;
-}
+/* Utility spacing */
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
 
-.mb-20 {
-  margin-bottom: 20px;
-}
-
+/* Desktop tweaks */
 @media (min-width: 1024px) {
   section {
     padding-top: 40px;
@@ -110,6 +125,55 @@ button {
   }
 
   section + section {
-    margin-top: 20px;
+    margin-top: 40px;
   }
+}
+
+/* ========== NEW FEATURES ========== */
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #007bff;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.fab:hover {
+  background-color: #0056b3;
+}
+
+/* Gradient Backgrounds by Section (Optional) */
+#about {
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+}
+
+#education {
+  background: linear-gradient(to right, #d7e1ec, #f5f7fa);
+}
+
+#projects {
+  background: linear-gradient(to right, #f8e1f4, #fdfcfb);
+}
+
+#contact {
+  background: linear-gradient(to right, #f0f4ff, #e4ebf5);
 }

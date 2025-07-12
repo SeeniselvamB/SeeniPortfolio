@@ -12,14 +12,14 @@ const projects = [
   {
     id: 2,
     title: "Project Two",
-    description: "Description of project two.",
+    description: "Project two.",
     image: "https://via.placeholder.com/150", // Replace with your image URL
     link: "https://github.com/yourusername/project-two"
   },
   {
     id: 3,
     title: "Project Three",
-    description: "Description of project three.",
+    description: "Project three.",
     image: "https://via.placeholder.com/150", // Replace with your image URL
     link: "https://github.com/yourusername/project-three"
   }

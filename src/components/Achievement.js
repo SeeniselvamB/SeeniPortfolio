@@ -1,12 +1,12 @@
 import React from 'react';
 import './Achievement.css';
-// Sample project data
+
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "Church Website.",
-    image: "./assests/Church.png", // Replace with your image URL
+    title: "CSI IMMANUEL CHURCH Website",
+    image:"/assests/Church2.png",
+    description: "A responsive and interactive website built for CSI IMMANUEL CHURCH, Chithumoondradaippu, showcasing the church’s history, worship timings, media gallery, event branches. Developed using React.js and deployed on GitHub Pages and Vercel, the site includes smooth navigation, scroll animations, and Google Maps integration for location visibility — all optimized for mobile and desktop viewing.",
     link: "https://csiimmanuelchurchcmu.vercel.app" // Project link (e.g., GitHub)
   },
   {

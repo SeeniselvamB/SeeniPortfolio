@@ -42,6 +42,18 @@ li {
   color: #555;
 }
 
+/* AOS animation base */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .education-section {
     padding: 30px 15px;
@@ -49,6 +61,7 @@ li {
 
   .education-content {
     padding: 0 10px;
+    padding-left:15px;
   }
 
   h1 {

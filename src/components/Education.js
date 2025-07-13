@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Education.css';
+
 function Education() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section id="education" className="education-section">
-      <div className="education-content">
-        <h1>Education</h1>
-        <div className="education-item">
-        <break></break>
-        <break></break>
-          <h2>B.Tech-Aritificial Intelligence and Data Science</h2>
-          <p>Sri Krishna College of Technology,Coimbatore on 2023-2027 aggeregate with 7.73 %.</p>
+      <div className="education-content" data-aos="fade-up">
+        <h1 data-aos="fade-down">Education</h1>
+
+        <div className="education-item" data-aos="fade-right">
+          <h2>B.Tech - Artificial Intelligence and Data Science</h2>
+          <p>
+            Sri Krishna College of Technology, Coimbatore (2023–2027) — Aggregate: 7.73 CGPA
+          </p>
         </div>
 
-        <div className="education-item">
+        <div className="education-item" data-aos="fade-left" data-aos-delay="100">
           <h2>Certifications</h2>
           <ul>
-            <li>DRONE CODING AND SIMULATION - Workshop Certificate on 2024.</li>
-            <li>Speech Contest Certificate at School on 2018-2019.</li>
+            <li>DRONE CODING AND SIMULATION - Workshop Certificate, 2024</li>
+            <li>Speech Contest Certificate at School, 2018–2019</li>
           </ul>
         </div>
       </div>
@@ -25,4 +33,3 @@ function Education() {
 }
 
 export default Education;
-

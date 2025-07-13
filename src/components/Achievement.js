@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Achievement.css';
 
 const projects = [
@@ -28,6 +30,10 @@ const projects = [
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const openModal = (project) => {
     setSelectedProject(project);
   };
@@ -38,10 +44,16 @@ function Projects() {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="projectname">My Projects</h2>
+      <h2 className="projectname" data-aos="fade-down">My Projects</h2>
+
       <div className="projects-list">
-        {projects.map(project => (
-          <div key={project.id} className="project-card">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="project-card"
+            data-aos="zoom-in-up"
+            data-aos-delay={index * 100}
+          >
             <img src={project.image} alt={project.title} className="project-image" />
             <h3>{project.title}</h3>
             <p>
@@ -61,7 +73,11 @@ function Projects() {
 
       {selectedProject && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+            data-aos="zoom-in"
+          >
             <button className="close-btn" onClick={closeModal}>&times;</button>
             <h3 className="modal-title">{selectedProject.title}</h3>
             <div className="modal-body">

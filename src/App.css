@@ -8,6 +8,16 @@
   margin: 0;
   padding: 0;
 }
+/* Hide navbar if body has class */
+body.hide-navbar .navbar {
+  display: none !important;
+}
+/* Disable pointer events & visual cue for navbar links before unlock */
+.navbar a.disabled-link {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 /* Main content layout */
 .content {

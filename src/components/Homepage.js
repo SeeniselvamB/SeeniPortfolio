@@ -1,15 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Home.css';
 
 function Homepage() {
-  const [showContent, setShowContent] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
-  }, []);
+
+    // Disable scrolling and navbar links before unlock
+    document.body.style.overflow = isUnlocked ? 'auto' : 'hidden';
+
+    const links = document.querySelectorAll('.navbar a');
+    links.forEach(link => {
+      if (!isUnlocked) {
+        link.classList.add('disabled-link');
+      } else {
+        link.classList.remove('disabled-link');
+      }
+    });
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      links.forEach(link => link.classList.remove('disabled-link'));
+    };
+  }, [isUnlocked]);
+
+  const unlockWebsite = () => {
+    setIsUnlocked(true);
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="home" className="home-section">
@@ -19,18 +43,10 @@ function Homepage() {
           B.Tech | AI & Data Science | React Developer
         </p>
 
-        {!showContent && (
-          <>
-            <div className="home-dashboard" data-aos="zoom-in">
-              <div className="dashboard-tile">🌐 Web Projects</div>
-              <div className="dashboard-tile">📚 Education</div>
-              <div className="dashboard-tile">💡 Skills</div>
-              <div className="dashboard-tile">📞 Contact</div>
-            </div>
-            <Link to="about" smooth={true} duration={500} onClick={() => setShowContent(true)}>
-              <button className="cta-button">Know More About Me</button>
-            </Link>
-          </>
+        {!isUnlocked && (
+          <button className="cta-button" onClick={unlockWebsite}>
+            Know More About Me
+          </button>
         )}
       </div>
     </section>

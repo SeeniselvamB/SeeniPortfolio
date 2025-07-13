@@ -106,6 +106,7 @@ section:first-of-type {
   padding: 0;
 }
 
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .home-content h1 {

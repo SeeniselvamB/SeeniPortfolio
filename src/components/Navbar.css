@@ -31,12 +31,7 @@
 .nav-links li {
   list-style: none;
 }
-/* 
-.nav-links a {
-  color:white;
-  text-decoration: none;
-  cursor:pointer;
-} */
+
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -65,7 +60,6 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    /* background-color: #333;  */
     background-color:skyblue; 
     width: 100%;
     position: absolute;
@@ -76,12 +70,18 @@
   .nav-links.open {
     display: flex;
   }
+  .nav-links a {
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+  }
 
   .nav-links li {
     padding: 15px 0;
     text-align: center;
     width: 93%;
     margin-top: 0cap;
+    
     
   }
   .nav-toggle {

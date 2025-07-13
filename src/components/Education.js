@@ -9,7 +9,7 @@ function Education() {
         <break></break>
         <break></break>
           <h2>B.Tech-Aritificial Intelligence and Data Science</h2>
-          <p>Sri Krishna College of Technology,Coimbatore on 2023-2027 aggeregate with 7.63 %.</p>
+          <p>Sri Krishna College of Technology,Coimbatore on 2023-2027 aggeregate with 7.73 %.</p>
         </div>
 
         <div className="education-item">

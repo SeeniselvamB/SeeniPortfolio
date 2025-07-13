@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
 import Aboutme from "./components/Aboutme";
 import Education from "./components/Education";
+import Skills from "./components/Skills";
 import Projects from "./components/Achievement";
 import Contacts from "./components/Phone";
 import ScrollToTop from "./ScrollToTop";
@@ -33,6 +34,9 @@ function App() {
                   <section id="education">
                     <Education />
                   </section>
+                   <section id="skills">      
+                    <Skills />
+                  </section>
 
                   <section id="projects">
                     <Projects />
@@ -48,6 +52,7 @@ function App() {
           
             <Route path="/about" element={<Aboutme />} />
             <Route path="/education" element={<Education />} />
+             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contacts />} />
           </Routes>

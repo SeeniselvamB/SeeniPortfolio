@@ -177,3 +177,23 @@ button {
 #contact {
   background: linear-gradient(to right, #f0f4ff, #e4ebf5);
 }
+/* Gradient Background for Skills Section */
+#skills {
+  background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+}
+
+/* Responsive spacing for Skills section */
+@media (min-width: 1024px) {
+  #skills {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding: 40px 0;
+    margin-top: 20px;
+  }
+}

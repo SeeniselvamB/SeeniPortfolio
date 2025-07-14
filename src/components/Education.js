@@ -23,8 +23,8 @@ function Education() {
         <div className="education-item" data-aos="fade-left" data-aos-delay="100">
           <h2>Certifications</h2>
           <ul>
-            <li>DRONE CODING AND SIMULATION - Workshop Certificate, 2024</li>
             <li>Speech Contest Certificate at School, 2018–2019</li>
+            <li>DRONE CODING AND SIMULATION - Workshop Certificate, 2024</li>
           </ul>
         </div>
       </div>

@@ -26,8 +26,8 @@ function Aboutme() {
             Hi, I am SEENISELVAM B from Virudhunagar, currently pursuing a B.Tech in Artificial Intelligence and Data Science at Sri Krishna College of Technology, Coimbatore.
           </p>
           <p>
-            I have developed a website for my native church, <strong>CSI Immanuel Church</strong>, to share information, events, and church history with the community.
-            I have also completed an internship at <strong>Phoneix Softech</strong>, where I gained hands-on experience in <strong>Basic Java Programming</strong>.
+            I have developed a website for my native church, <strong>CSI Immanuel Church, Chithumoondradaippu</strong>, to share information, events, and church history with the community.
+            I have also completed an internship at <strong>Phoneix Softech</strong>, where I gained hands-on experience in <strong>Java Programming</strong>.
           </p>
         </div>
       </div>

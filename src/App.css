@@ -22,6 +22,7 @@ body.hide-navbar .navbar {
 /* Main content layout */
 .content {
   padding-top: 70px;
+  justify-items: center;
 }
 
 /* Global section layout */
@@ -29,6 +30,7 @@ section {
   padding: 60px 0;
   width: 100%;
   box-sizing: border-box;
+  
 }
 
 /* Typography */
@@ -70,6 +72,7 @@ section + section {
 @media (max-width: 768px) {
   section {
     padding: 40px 0;
+    
   }
 
   h1 {
@@ -132,6 +135,7 @@ button {
   section {
     padding-top: 40px;
     padding-bottom: 40px;
+    justify-content: center;
   }
 
   section + section {

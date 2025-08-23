@@ -13,10 +13,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "This is project two description with moderate length content to test height alignment.",
-    image: "https://via.placeholder.com/150",
-    link: "https://github.com/yourusername/project-two"
+    title: "Salary Calculator App",
+    description: "A cross-platform mobile application built with React Native and Spring Boot for calculating weekly salaries. The app allows users to input in-time, out-time, hourly rate, and leave days, automatically calculating total working hours and salary. Data is securely stored in a Spring Boot + MySQL backend with REST APIs. Developed with a clean, user-friendly interface and packaged as an Android APK via Expo EAS Build, ensuring accessibility and smooth performance across devices.",
+    image: "/assests/calc.png",
+    link: "https://expo.dev/accounts/seeniselvam/projects/salary-calculator/builds/5b850cdd-410e-43b6-82f2-997dc90ea71f"
   },
   {
     id: 3,

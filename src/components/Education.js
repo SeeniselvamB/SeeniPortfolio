@@ -11,7 +11,7 @@ function Education() {
   return (
     <section id="education" className="education-section">
       <div className="education-content" data-aos="fade-up">
-        <h1 data-aos="fade-down">Education</h1>
+        <h1 data-aos="fade-down">Expertise</h1>
 
         <div className="education-item" data-aos="fade-right">
           <h2>B.Tech - Artificial Intelligence and Data Science</h2>

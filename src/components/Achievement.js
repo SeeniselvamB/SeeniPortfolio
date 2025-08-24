@@ -24,6 +24,13 @@ const projects = [
     description: "Short description.",
     image: "https://via.placeholder.com/150",
     link: "https://github.com/yourusername/project-three"
+  },
+  {
+    id: 4,
+    title: "Project Four",
+    description: "Short description.",
+    image: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/project-three"
   }
 ];
 

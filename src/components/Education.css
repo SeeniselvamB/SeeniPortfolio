@@ -1,12 +1,22 @@
+
 .education-section {
   background-color: #f4f4f4;
-  padding: 60px 20px;
   text-align: left;
+  min-height: 100vh;
+  padding: 80px 20px 20px 20px; 
+  display: flex; 
+
+  
+ 
 }
+
 
 .education-content {
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 30px;
+  
+  
 }
 
 .education-item {

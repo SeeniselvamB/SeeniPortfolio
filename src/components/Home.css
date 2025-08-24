@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
   background-image: url('../assests/bimg2.png');
   background-size: cover;
   background-position: center;
@@ -24,6 +24,9 @@
   max-width: 850px;
   position: relative;
   transition: all 0.3s ease;
+  margin-top: 200px;
+  margin-bottom: 500px;
+  
 }
 
 .home-content h1 {
@@ -111,7 +114,9 @@ section:first-of-type {
 @media screen and (max-width: 768px) {
   .home-content h1 {
     font-size: 2rem;
+    
   }
+  
 
   .home-tagline {
     font-size: 1rem;

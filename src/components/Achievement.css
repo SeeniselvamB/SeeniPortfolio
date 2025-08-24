@@ -1,13 +1,31 @@
+#projects {
+  padding-top: 80px;     
+  padding-bottom: 40px;
+  margin-top: 0;          
+}
+@media (max-width: 768px) {
+  #projects {
+    margin-top: 30px;   
+    padding-top: 20px;  
+    padding-bottom: 50px;
+  }
+}
 .projects-section {
   background-color: #f4f4f4;
-  padding: 60px 20px;
-  margin-top: 40px;
+  margin-top: 20px;
+  padding: 60px 20px 60px 20px;  
+  min-height: 100vh;
 }
 
 .projectname {
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
+  color: #222;
+  margin-bottom: 40px;
+  margin-top: 0;
+  letter-spacing: 1px;
+ 
 }
 
 .projects-list {
@@ -86,6 +104,7 @@
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   align-items: center;
+  height: 30vh;
 }
 
 .modal-title {
@@ -106,6 +125,7 @@
   font-size: 1rem;
   color: #444;
   text-align: center;
+  
 }
 
 .center-link {
@@ -113,7 +133,6 @@
   justify-content: center;
 }
 
-/* X button style */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -132,7 +151,7 @@
 .close-btn:hover {
   color: #007bff;
 }
-/* AOS animation base */
+
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
@@ -144,10 +163,9 @@
   opacity: 1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .project-card {
-    width: 90%;
+    width: 80%;
   }
 
   .modal-content {

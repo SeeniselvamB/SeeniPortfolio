@@ -84,6 +84,11 @@ li {
 
   p,
   li {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .education-item{
+    h2{
+      font-size: medium;
+    }
   }
 }

@@ -13,7 +13,7 @@ function Aboutme() {
   return (
     
     <section id="about" className="about-section">
-      <h1 className="about-heading">About Me</h1>
+      <h1 className="about-heading" data-aos="fade-down">About Me</h1>
       <div className="about-content glass-card">
         <div className="about-image" data-aos="fade-right">
           <img
@@ -40,6 +40,7 @@ function Aboutme() {
             is to contribute to impactful <strong>AI-Driven Projects</strong> that solve real-world problems and create meaningful 
             digital solutions.
           </p>
+          <button className="cta-button">View Projects</button>
         </div>
       </div>
     </section>

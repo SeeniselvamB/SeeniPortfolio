@@ -30,7 +30,10 @@
 }
 
 .education-card {
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: linear-gradient(135deg, #eafafc);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #222;
   border-radius: 16px;
   padding: 25px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);

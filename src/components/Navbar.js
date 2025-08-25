@@ -14,7 +14,6 @@ const Navbar = ({ isMobile }) => {
 
       <ul className={isOpen ? "nav-links open" : "nav-links"}>
         {isMobile ? (
-          // 📱 Mobile → Scroll links
           <>
             <li><ScrollLink to="home" smooth duration={500} onClick={closeMenu}>Home</ScrollLink></li>
             <li><ScrollLink to="about" smooth duration={500} onClick={closeMenu}>About</ScrollLink></li>
@@ -24,7 +23,6 @@ const Navbar = ({ isMobile }) => {
             <li><ScrollLink to="contact" smooth duration={500} onClick={closeMenu}>Contact</ScrollLink></li>
           </>
         ) : (
-          // 💻 Desktop → Router links
           <>
             <li><Link to="/" onClick={closeMenu}>Home</Link></li>
             <li><Link to="/about" onClick={closeMenu}>About</Link></li>

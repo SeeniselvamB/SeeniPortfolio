@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Skills.css';
 
 function Skills() {
+  useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <section id="skills" className="skills-section">
       <h2 className="skills-title" data-aos="fade-down">Skills</h2>

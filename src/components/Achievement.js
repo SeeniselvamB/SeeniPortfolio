@@ -39,6 +39,7 @@ function Projects() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+    window.scrollTo(0, 0);
   }, []);
 
   const openModal = (project) => {

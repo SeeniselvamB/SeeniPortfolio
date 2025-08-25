@@ -11,11 +11,10 @@ function Homepage() {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
-
+    window.scrollTo(0, 0);
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
 
-    // Lock scroll until unlock
     document.body.style.overflow = isUnlocked ? 'auto' : 'hidden';
 
     const links = document.querySelectorAll('.navbar a');
@@ -34,20 +33,22 @@ function Homepage() {
     };
   }, [isUnlocked]);
 
+ 
   const unlockWebsite = () => {
-    setIsUnlocked(true);
+  setIsUnlocked(true);
 
-    if (isMobile) {
-      // 📱 Mobile → scroll to #about section
+  if (isMobile) {
+    setTimeout(() => {
       const aboutSection = document.getElementById("about");
       if (aboutSection) {
         aboutSection.scrollIntoView({ behavior: "smooth" });
       }
-    } else {
-      // 💻 Desktop → navigate to /about page
-      navigate("/about");
-    }
-  };
+    }, 100); 
+  } else {
+    
+    navigate("/about");
+  }
+};
 
   return (
     <section id="home" className="home-section">

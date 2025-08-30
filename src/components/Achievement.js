@@ -20,10 +20,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "Short description.",
-    image: "https://via.placeholder.com/150",
-    link: "https://github.com/yourusername/project-three"
+    title: "BookStore Web App",
+    description: "A responsive bookstore web app built with React that lets users search and browse books, view details, and manage a shopping cart. The cart updates live in the navbar and persists using Context API with localStorage. It also includes a smooth checkout flow and a modern, gradient-styled UI for a clean user experience.",
+    image: "/assests/book.png",
+    link: "https://onlinebookstoreapp.vercel.app/"
   },
   {
     id: 4,

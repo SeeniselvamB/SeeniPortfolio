@@ -21,7 +21,7 @@ const projects = [
   {
     id: 3,
     title: "BookStore Web App",
-    description: "A responsive bookstore web app built with React that lets users search and browse books, view details, and manage a shopping cart. The cart updates live in the navbar and persists using Context API with localStorage. It also includes a smooth checkout flow and a modern, gradient-styled UI for a clean user experience.",
+    description: "This project is an online bookstore web app built with React. Users can search for books through the Google Books API and add them to a shopping cart. The cart is stored in localStorage and can be updated anytime. At checkout, the app sends the selected book links (PDF or Google Books preview) directly to the user’s email using EmailJS, making the process simple and efficient.",
     image: "/assests/book.png",
     link: "https://onlinebookstoreapp.vercel.app/"
   },

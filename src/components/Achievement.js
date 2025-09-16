@@ -11,27 +11,37 @@ const projects = [
     description: "A responsive and interactive website built for CSI IMMANUEL CHURCH, Chithumoondradaippu, showcasing the church’s history, worship timings, media gallery, event branches. Developed using React.js and deployed on GitHub Pages and Vercel, the site includes smooth navigation, scroll animations, and Google Maps integration for location visibility — all optimized for mobile and desktop viewing.",
     link: "https://csiimmanuelchurchcmu.vercel.app"
   },
+
   {
     id: 2,
-    title: "Salary Calculator App",
-    description: "A cross-platform mobile application built with React Native and Spring Boot for calculating weekly salaries. The app allows users to input in-time, out-time, hourly rate, and leave days, automatically calculating total working hours and salary. Data is securely stored in a Spring Boot + MySQL backend with REST APIs. Developed with a clean, user-friendly interface and packaged as an Android APK via Expo EAS Build, ensuring accessibility and smooth performance across devices.",
-    image: "/assests/calc.png",
-    link: "https://expo.dev/accounts/seeniselvam/projects/salary-calculator/builds/5b850cdd-410e-43b6-82f2-997dc90ea71f"
-  },
-  {
-    id: 3,
     title: "BookStore Web App",
     description: "This project is an online bookstore web app built with React. Users can search for books through the Google Books API and add them to a shopping cart. The cart is stored in localStorage and can be updated anytime. At checkout, the app sends the selected book links (PDF or Google Books preview) directly to the user’s email using EmailJS, making the process simple and efficient.",
     image: "/assests/book.png",
     link: "https://onlinebookstoreapp.vercel.app/"
   },
+  
+  {
+    id: 3,
+    title: "ToyStore Application – Backend Development",
+    description: "Developed a backend system for a toy store using Spring Boot. The application manages products, inventory, orders, and users with RESTful APIs. Integrated Spring Data JPA for database operations, Spring Security for authentication, and ensured smooth CRUD operations for toys and orders.",
+    image: "/assests/toy.jpg",
+    link: "https://github.com/iamneo-production/b0454922-3776-4d76-bc1e-2bebe61b6e63-863d052f-c59f-43c1-9760-847842d682a1/tree/An-Interactive-Toy-Store-Application-with-Age-Appropriate-Recommendations-and-Discounts%C2%A0-SeeniselvamB"
+  },
+  
   {
     id: 4,
-    title: "Project Four",
-    description: "Short description.",
-    image: "https://via.placeholder.com/150",
-    link: "https://github.com/yourusername/project-three"
-  }
+    title: "Scientific Calculator",
+    description: "Developed a desktop scientific calculator using Python and Tkinter. It supports basic arithmetic operations (addition, subtraction, multiplication, division) and advanced functions like sin, cos, tan, logarithm, exponent, factorial, power, square root, and constants like π and e. The GUI is interactive, with hover effects, keyboard bindings, and dynamic input/output fields for a user-friendly experience.",
+    image: "/assests/calu.jpg",
+    link: ""
+  },
+  {
+    id: 5,
+    title: "Salary Calculator App",
+    description: "A cross-platform mobile application built with React Native and Spring Boot for calculating weekly salaries. The app allows users to input in-time, out-time, hourly rate, and leave days, automatically calculating total working hours and salary. Data is securely stored in a Spring Boot + MySQL backend with REST APIs. Developed with a clean, user-friendly interface and packaged as an Android APK via Expo EAS Build, ensuring accessibility and smooth performance across devices.",
+    image: "/assests/calc.png",
+    link: "https://expo.dev/accounts/seeniselvam/projects/salary-calculator/builds/5b850cdd-410e-43b6-82f2-997dc90ea71f"
+  },
 ];
 
 function Projects() {

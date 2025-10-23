@@ -42,6 +42,14 @@ const projects = [
     image: "/assests/calc.png",
     link: "https://drive.google.com/file/d/1yVDnpo6w8o9NF6rtZ9xB2wSEZZoVdpBG/view?usp=drive_link"
   },
+
+  {
+    id: 6,
+    title: "Learning Management System",
+    description: "Learning Management System (LMS) is a web-based platform that facilitates seamless online education through role-based access. Admins manage users, instructors, and courses, ensuring smooth platform operations. Instructors can create and manage courses, quizzes, and monitor student progress, while students can access courses, complete quizzes, and track their learning performance. The system provides an organized, interactive, and efficient environment for course management and performance analysis.",
+    image: "/assests/lms.png",
+    link: "https://learnsystem.vercel.app"
+  },
 ];
 
 function Projects() {

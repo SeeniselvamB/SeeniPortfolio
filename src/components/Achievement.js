@@ -50,6 +50,13 @@ const projects = [
     image: "/assests/lms.png",
     link: "https://learnsystem.vercel.app"
   },
+  {
+    id: 7,
+    title: "Expense Tracker App",
+    description: "The Money Tracker App is a simple and efficient expense management tool built with React Native. It allows users to record, view, and manage daily transactions with clear separation between credit and debit entries. The app dynamically calculates total balance, generates monthly PDF reports. With intuitive navigation and local data storage, it ensures smooth performance and offline access. Designed for everyday use, it helps users maintain financial discipline and track their savings effortlessly.",
+    image: "/assests/logo.png",
+    link: "https://drive.google.com/file/d/1t92CxcZtsOuhoZuHpUtTwp2dio3A-fJZ/view?usp=drive_link"
+  },
 ];
 
 function Projects() {

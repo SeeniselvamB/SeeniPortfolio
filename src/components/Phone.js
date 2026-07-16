@@ -1,9 +1,8 @@
-
 import React, { useEffect } from 'react';
 import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Phone.css'; 
+import '../styles/Phone.css'; 
 
 function Contacts() {
   useEffect(() => {

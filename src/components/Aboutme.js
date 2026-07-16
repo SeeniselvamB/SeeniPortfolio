@@ -1,36 +1,29 @@
-
-import React, { useEffect ,useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Aboutme.css';
+import '../styles/Aboutme.css';
 import seeni from '../assests/seeni.jpg';
 
 function Aboutme() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     window.scrollTo(0, 0);
-
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const goToProjects = () => {
-    if (isMobile) {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      navigate("/projects");
+    const projectsSection = document.getElementById("projects");
+
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
   return (
-    
+
     <section id="about" className="about-section">
       <h1 className="about-heading" data-aos="fade-down">About Me</h1>
       <div className="about-content glass-card">
@@ -43,25 +36,27 @@ function Aboutme() {
         </div>
         <div className="about-text" data-aos="fade-left">
           <p>
-            I am <strong>Seeniselvam B</strong>, a passionate and detail-oriented <strong>Full-Stack Developer</strong> 
-            with a strong foundation in <strong>Artificial Intelligence and Data Science</strong>. Currently pursuing my 
-            <strong> B.Tech in AI & DS at Sri Krishna College of Technology, Coimbatore</strong>, I specialize in building 
-            responsive, user-friendly <strong>Web and Mobile Applications</strong> using React.js, React Native, Spring Boot, and Java.
+            I am Seeniselvam B, a passionate Artificial Intelligence and Data Science undergraduate at Sri Krishna College of Technology, Coimbatore,
+            with a strong interest in Full Stack Development and Artificial Intelligence. I enjoy building modern, responsive, and user-centric web
+            applications that combine clean design with efficient functionality.
           </p>
           <p>
-            I have hands-on experience developing real-world projects, including a responsive website for 
-            <strong> CSI Immanuel Church, Chithumoondradaippu</strong>, which helps the community access church history, worship timings, 
-            and events online. Additionally, during my <strong>Internship at Phoneix Softech</strong>, I gained practical 
-            experience in Java programming and software development workflows.
+            With hands-on experience in React.js, Spring Boot, Java, Python, MySQL, HTML, CSS, and JavaScript, I have developed projects that address
+            real-world challenges while strengthening my problem-solving and software development skills. I am committed to writing clean, maintainable
+            code and creating applications that deliver an excellent user experience.
           </p>
           <p>
-            My short-term goal is to strengthen my expertise in <strong>Full-Stack Development</strong>, while my long-term aspiration 
-            is to contribute to impactful <strong>AI-Driven Projects</strong> that solve real-world problems and create meaningful 
-            digital solutions.
+            I am a continuous learner who enjoys exploring new technologies, improving my technical expertise, and embracing challenges that foster both
+            personal and professional growth. My goal is to begin my career as a Software Engineer, contributing to innovative solutions while expanding my
+            knowledge in software engineering, full-stack development, and artificial intelligence.I believe that technology has the power to solve meaningful
+            problems, and I am motivated to create impactful, scalable, and user-friendly applications that make a difference.
           </p>
-          <button className="cta-button" onClick={goToProjects}>
-          View Projects
-        </button>
+          <div className="about-btn">
+            <button className="cta-button" onClick={goToProjects}>
+              View Projects
+            </button>
+          </div>
+
         </div>
       </div>
     </section>

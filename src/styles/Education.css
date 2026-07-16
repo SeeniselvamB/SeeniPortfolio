@@ -1,0 +1,148 @@
+@import './_tokens.css';
+
+.education-section {
+  position: relative;
+  padding: var(--section-pad-y) var(--section-pad-x);
+  background: var(--color-bg-soft);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(124, 58, 237, 0.06), transparent 60%),
+    var(--color-bg-soft);
+}
+.exp-heading {
+  position: relative;
+  text-align: center;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin: 0 auto 48px;
+  width: fit-content;
+}
+
+.exp-heading::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-brand);
+}
+.education-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.18), transparent 70%);
+  filter: blur(40px);
+  animation: auroraDrift 14s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.education-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: center;
+  
+  
+}
+
+.education-content > h1 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+  text-align: left;
+}
+
+.education-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-glass-strong), var(--color-glass));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 32px);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.6);
+  transition: transform var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+
+  /* Always show the blue border & glow */
+  border: 1px solid rgba(59, 130, 246, 0.8);
+  border-radius: 28px;
+
+  box-shadow:
+    0 0 12px rgba(59, 130, 246, 0.45),
+    0 0 25px rgba(59, 130, 246, 0.30),
+    0 0 25px rgba(59, 130, 246, 0.20);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 34px 70px -28px rgba(37, 99, 235, 0.35);
+}
+
+.education-card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.education-card p,
+.education-card li {
+  font-size: 0.92rem;
+  color: var(--color-text-dim);
+  line-height: 1.7;
+}
+
+.education-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.education-card li {
+  position: relative;
+  padding-left: 18px;
+  text-align: justify;
+}
+
+.education-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+}
+
+.education-card strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.view-skills-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,58 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Education.css';
+import '../styles/Education.css';
 function Education() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     window.scrollTo(0, 0);
-
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const goToSkills = () => {
-    if (isMobile) {
-      setTimeout(() => {
-        const skillsSection = document.getElementById("skills");
-        if (skillsSection) {
-          skillsSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      navigate("/skills");
-    }
-  };
+  
   return (
     <section id="education" className="education-section">
       <div className="education-content" data-aos="fade-up">
-        <h1 data-aos="fade-down">Expertize</h1>
+        <h1 className="exp-heading" data-aos="fade-down">Expertize</h1>
 
         <div className="education-grid">
           <div className="education-card" data-aos="fade-right">
-            <div className="icon"></div>
             <h2>B.Tech - AI & Data Science</h2>
             <p>
-              Sri Krishna College of Technology, Coimbatore (2023–2027)  
-              <br /> <strong>Aggregate:</strong> 7.73 CGPA
+              Sri Krishna College of Technology, Coimbatore (2023–2027)
+              <br /> <strong>Aggregate:</strong> 7.74 CGPA
             </p>
           </div>
 
           <div className="education-card" data-aos="fade-up">
-            <div className="icon"></div>
             <h2>Internship</h2>
             <ul>
-              <li>Java Programming at <strong>Phoneix Softech, Madurai</strong></li>
+              <li>
+                <h3>Java Programming</h3>
+                <p><strong>Phoenix Softech, Madurai</strong> | April 2025 | 15-Day Training</p>
+              </li>
+              <li>
+                <h3>Data Science</h3>
+                <p><strong>ASCOX Technosoft Solution PVT LTD, Madurai</strong> | May 2026 | 15-Day Training</p>
+              </li>
             </ul>
+
           </div>
 
           <div className="education-card" data-aos="fade-left">
-            <div className="icon"></div>
             <h2>Certifications</h2>
             <ul>
               <li>Speech Contest Certificate (2018–2019)</li>
@@ -65,11 +52,6 @@ function Education() {
               <li>Learnathon Participation (2024)</li>
             </ul>
           </div>
-        </div>
-        <div className="view-skills-container" >
-          <button className="cta-button" onClick={goToSkills}>
-            View Skills
-          </button>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Achievement.css';
+import '../styles/Achievement.css';
 
 const projects = [
   {
@@ -19,28 +19,35 @@ const projects = [
     image: "/assests/book.png",
     link: "https://onlinebookstoreapp.vercel.app/"
   },
-  
   {
     id: 3,
-    title: "Salary Calculator App",
-    description: "A cross-platform mobile application built with React Native and Spring Boot for calculating weekly salaries. The app allows users to input in-time, out-time, hourly rate, and leave days, automatically calculating total working hours and salary. Data is securely stored in a Spring Boot + MySQL backend with REST APIs. Developed with a clean, user-friendly interface and packaged as an Android APK via Expo EAS Build, ensuring accessibility and smooth performance across devices.",
-    image: "/assests/calc.png",
-    link: "https://drive.google.com/file/d/1yVDnpo6w8o9NF6rtZ9xB2wSEZZoVdpBG/view?usp=drive_link"
-  },
-
-  {
-    id: 4,
     title: "Learning Management System",
     description: "Learning Management System (LMS) is a web-based platform that facilitates seamless online education through role-based access. Admins manage users, instructors, and courses, ensuring smooth platform operations. Instructors can create and manage courses, quizzes, and monitor student progress, while students can access courses, complete quizzes, and track their learning performance. The system provides an organized, interactive, and efficient environment for course management and performance analysis.",
     image: "/assests/lms.png",
     link: "https://learnsystem.vercel.app"
   },
+
+  {
+    id: 4,
+    title: "Salary Calculator App",
+    description: "A cross-platform mobile application built with React Native and Spring Boot for calculating weekly salaries. The app allows users to input in-time, out-time, hourly rate, and leave days, automatically calculating total working hours and salary. Data is securely stored in a Spring Boot + MySQL backend with REST APIs. Developed with a clean, user-friendly interface and packaged as an Android APK via Expo EAS Build, ensuring accessibility and smooth performance across devices.",
+    image: "/assests/sal.jpg",
+    link: "https://drive.google.com/file/d/1lhcJlOGwehgTUBNU6a7Lewz_3BjGz5Dm/view?usp=sharing"
+  },
+
   {
     id: 5,
     title: "Expense Tracker App",
-    description: "The Money Tracker App is a simple and efficient expense management tool built with React Native. It allows users to record, view, and manage daily transactions with clear separation between credit and debit entries. The app dynamically calculates total balance, generates monthly PDF reports. With intuitive navigation and local data storage, it ensures smooth performance and offline access. Designed for everyday use, it helps users maintain financial discipline and track their savings effortlessly.",
-    image: "/assests/logo.png",
-    link: "https://drive.google.com/file/d/1t92CxcZtsOuhoZuHpUtTwp2dio3A-fJZ/view?usp=drive_link"
+    description: "The Expense Tracker App is a simple and efficient expense management tool built with React Native. It allows users to record, view, and manage daily transactions with clear separation between credit and debit entries. The app dynamically calculates total balance, generates monthly PDF reports. With intuitive navigation and local data storage, it ensures smooth performance and offline access. Designed for everyday use, it helps users maintain financial discipline and track their savings effortlessly.",
+    image: "/assests/exp.png",
+    link: "https://drive.google.com/file/d/1fI3HRZLRu_jl_Kh0Jw8__F6urbBgckRn/view?usp=sharing"
+  },
+  {
+    id: 6,
+    title: "Market Distributor App",
+    description: " Developed a scalable Market Distributor mobile application to streamline sales, billing, and daily operational workflows using modern technologies. Enabled invoice generation, real-time reporting, and integrated expense tracking to improve operational efficiency.",
+    image: "/assests/mar.png",
+    link: "https://drive.google.com/file/d/1O8pjHUIC68Ol9MzDRa6SeGvwXiy0qiU0/view?usp=sharing"
   },
 ];
 
@@ -51,6 +58,18 @@ function Projects() {
     AOS.init({ duration: 1000, once: true });
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -77,12 +96,12 @@ function Projects() {
             <p>
               {project.description.length > 100
                 ? <>
-                    {project.description.substring(0, 100)}...
-                    <span className="read-more" onClick={() => openModal(project)}> Read more</span>
-                  </>
+                  {project.description.substring(0, 100)}...
+                  <span className="read-more" onClick={() => openModal(project)}> Read more</span>
+                </>
                 : project.description}
             </p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-button">
               View Project
             </a>
           </div>

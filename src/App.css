@@ -1,215 +1,33 @@
-/* Base App layout */
+
+@import "./styles/_tokens.css";
+
 .App {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  background-color: #f5f5f5;
-  min-height: 100vh;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-/* Hide navbar if body has class */
-body.hide-navbar .navbar {
-  display: none !important;
-}
-/* Disable pointer events & visual cue for navbar links before unlock */
-.navbar a.disabled-link {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* Main content layout */
-.content {
-  padding-top: 70px;
-  justify-items: center;
-}
-
-/* Global section layout */
-section {
-  padding: 60px 0;
+  position: relative;
   width: 100%;
-  box-sizing: border-box;
-  
+  min-height: 100vh;
+  background: var(--color-bg);
+  overflow-x: hidden;
 }
 
-/* Typography */
-h1, h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Section spacing fix */
-section + section {
-  margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-  section + section {
-    margin-top: 20px;
-  }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  section {
-    padding: 40px 0;
-    
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .content {
-    padding-top: 60px;
-  }
-}
-
-/* Universal smooth transitions */
-* {
-  transition: all 0.3s ease;
-}
-
-/* Scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Link effects */
-a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-/* Alternating section background */
-section:nth-of-type(even) {
-  background: linear-gradient(to right, #f0f0f0, #fafafa);
-}
-
-/* Focus effects */
-a:focus,
-button:focus {
-  outline: 2px solid #007bff;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Button spacing */
-button {
-  margin: 10px 0;
-}
-
-/* Utility spacing */
-.mt-20 { margin-top: 20px; }
-.mb-20 { margin-bottom: 20px; }
-
-/* Desktop tweaks */
-@media (min-width: 1024px) {
-  section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    justify-content: center;
-  }
-
-  section + section {
-    margin-top: 40px;
-  }
-}
-
-/* ========== NEW FEATURES ========== */
-
-/* Glassmorphism Utility */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-}
-
-/* Floating Action Button */
-.fab {
+.App::before {
+  content: '';
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  background-color: #007bff;
-  color: white;
-  font-size: 24px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 999;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(236, 72, 153, 0.07), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 30%, rgba(249, 115, 22, 0.06), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 75%, rgba(8, 145, 178, 0.05), transparent 60%),
+    radial-gradient(ellipse 55% 40% at 90% 100%, rgba(168, 85, 247, 0.06), transparent 60%);
 }
 
-.fab:hover {
-  background-color: #0056b3;
+.content {
+  position: relative;
+  z-index: 1;
 }
 
-/* Gradient Backgrounds by Section (Optional) */
-#about {
-  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+.content section {
+  position: relative;
+  scroll-margin-top: 84px; 
 }
-
-#education {
-  background: linear-gradient(to right, #d7e1ec, #f5f7fa);
-}
-
-#projects {
-  background: linear-gradient(to right, #f8e1f4, #fdfcfb);
-}
-
-#contact {
-  background: linear-gradient(to right, #f0f4ff, #e4ebf5);
-}
-/* Gradient Background for Skills Section */
-#skills {
-  background: linear-gradient(to right, #e3ffe7, #d9e7ff);
-}
-
-/* Responsive spacing for Skills section */
-@media (min-width: 1024px) {
-  #skills {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  #skills {
-    padding: 40px 0;
-    margin-top: 20px;
-  }
-}
-
-

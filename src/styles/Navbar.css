@@ -38,7 +38,6 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  /* color: transparent; */
   color:white;
   animation: gradientShift 8s ease-in-out infinite;
   cursor: default;
@@ -80,8 +79,7 @@
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  /* color: var(--color-text); */
-  color: blue;
+  color:white;
 }
 
 .nav-links li a:hover::after,
@@ -98,7 +96,6 @@
   cursor: pointer;
   font-size: 1.4rem;
   line-height: 1;
-  /* color: var(--color-text); */
   color:white;
   transition: transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
